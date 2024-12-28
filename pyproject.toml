@@ -8,6 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.13"
 torch = "^2.5.1"
+tqdm = "^4.67.1"
+datasets = "^3.2.0"
+tokenizers = "^0.21.0"
+torchmetrics = "^1.6.1"
 
 
 [tool.poetry.group.dev.dependencies]
