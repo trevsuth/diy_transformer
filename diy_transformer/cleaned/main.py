@@ -16,6 +16,7 @@ from decoder import Decoder
 from projection_layer import ProjectionLayer
 from transformer import Transformer
 
+
 def build_transformer(
     src_vocab_size: int,
     tgt_vocab_size: int,

@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import math
 
+
 class PositionalEncoding(nn.Module):
     """
     This class adds positional information to the token embeddings using sine and

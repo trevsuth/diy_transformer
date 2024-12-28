@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import math
 
+
 class InputEmbeddings(nn.Module):
     """
     This class implements the embedding layer for a Transformer model, as described in

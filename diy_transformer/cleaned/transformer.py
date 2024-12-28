@@ -7,6 +7,7 @@ from input_embeddings import InputEmbeddings
 from positional_encoding import PositionalEncoding
 from projection_layer import ProjectionLayer
 
+
 class Transformer(nn.Module):
     """
     The full Transformer architecture, consisting of an encoder and a decoder, along with

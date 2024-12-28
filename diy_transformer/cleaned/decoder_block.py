@@ -5,6 +5,7 @@ from multi_head_attention_block import MultiHeadAttentionBlock
 from feed_forward_block import FeedForwardBlock
 from residual_connection import ResidualConnection
 
+
 class DecoderBlock(nn.Module):
     """
     A single layer (block) of the Transformer decoder, consisting of:
@@ -62,7 +63,10 @@ class DecoderBlock(nn.Module):
             x, lambda x: self.self_attention_block(x, x, x, tgt_mask)
         )
         x = self.residual_connections[1](
-            x, lambda x: self.cross_attention_block(x, encoder_output, encoder_output, src_mask)
+            x,
+            lambda x: self.cross_attention_block(
+                x, encoder_output, encoder_output, src_mask
+            ),
         )
         x = self.residual_connections[2](x, self.feed_forward_block)
         return x

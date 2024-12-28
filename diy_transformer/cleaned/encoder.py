@@ -3,6 +3,7 @@ import torch.nn as nn
 
 from layer_normalization import LayerNormalization
 
+
 class Encoder(nn.Module):
     """
     The Transformer Encoder, which stacks multiple EncoderBlock layers.

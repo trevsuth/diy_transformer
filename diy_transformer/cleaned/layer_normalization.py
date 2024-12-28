@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+
 class LayerNormalization(nn.Module):
     """
     Implements layer normalization as described in 'Building a Transformer from

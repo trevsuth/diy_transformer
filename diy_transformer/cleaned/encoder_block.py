@@ -5,6 +5,7 @@ from multi_head_attention_block import MultiHeadAttentionBlock
 from feed_forward_block import FeedForwardBlock
 from residual_connection import ResidualConnection
 
+
 class EncoderBlock(nn.Module):
     """
     A single layer (block) of the Transformer encoder, consisting of:

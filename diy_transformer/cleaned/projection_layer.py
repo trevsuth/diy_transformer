@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+
 class ProjectionLayer(nn.Module):
     """
     Maps the decoder's output to the vocabulary logits, as described in

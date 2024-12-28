@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from layer_normalization import LayerNormalization
 
+
 class ResidualConnection(nn.Module):
     """
     Implements the residual connection pattern used in Transformers, along with

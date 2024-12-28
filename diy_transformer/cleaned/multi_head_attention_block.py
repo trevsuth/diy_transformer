@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import math
 
+
 class MultiHeadAttentionBlock(nn.Module):
     """
     Implements multi-head attention as described in 'Building a Transformer from
@@ -85,9 +86,13 @@ class MultiHeadAttentionBlock(nn.Module):
         value = self.w_v(v)
 
         # Reshape into (batch, h, seq, d_k)
-        query = query.view(query.shape[0], query.shape[1], self.h, self.d_k).transpose(1, 2)
+        query = query.view(query.shape[0], query.shape[1], self.h, self.d_k).transpose(
+            1, 2
+        )
         key = key.view(key.shape[0], key.shape[1], self.h, self.d_k).transpose(1, 2)
-        value = value.view(value.shape[0], value.shape[1], self.h, self.d_k).transpose(1, 2)
+        value = value.view(value.shape[0], value.shape[1], self.h, self.d_k).transpose(
+            1, 2
+        )
 
         # Scaled dot-product attention
         x, self.attention_scores = MultiHeadAttentionBlock.attention(

@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+
 class FeedForwardBlock(nn.Module):
     """
     Implements the position-wise feed-forward network used within the Transformer layers,
